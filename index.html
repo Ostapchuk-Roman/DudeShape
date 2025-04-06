@@ -7,21 +7,87 @@
     <title>DudeShape</title>
   </head>
   <body>
-    <header class="header">
-      <p class="header__logo">DudeShape</p>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <label for="">
-        <input type="text" />
-        svg
-      </label>
-      swg
-    </header>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="header__container">
+          <a class="header__logo" href="#header">DudeShape</a>
+
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Home</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Features</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__icon">
+            <label for="">
+              <input class="menu__icon--input" type="text" />
+              <svg class="menu__icon--search">
+                <use href="./assets/icon/sprite.svg#icon-search"></use>
+              </svg>
+            </label>
+            <svg class="menu__icon--burger">
+              <use href="./assets/icon/sprite.svg#icon-burger"></use>
+            </svg>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page-hero">
+          <div class="page-hero__container">
+            <div class="page-hero__content">
+              <h1 class="page-hero__title">
+                We <span class="page-hero__title--accent">Help You</span> Make
+                Modern Furniture
+              </h1>
+              <div class="page-hero__text">
+                <p>
+                  We will help you to make an elegant and luxurious interior
+                  designed by professional interior designer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-companies">
+          <div class="page-companies__container">
+            <h2 class="page-companies__title">Trusted by 20,000+ companies</h2>
+            <div class="page-companies__wrapper">
+              <div class="page-companies__images">
+                <img
+                  src="./assets/images/mastercard.png"
+                  alt="logo mastercard"
+                />
+              </div>
+              <div class="page-companies__images">
+                <img src="./assets/images/airbnb.png" alt="logo airbnb" />
+              </div>
+              <div class="page-companies__images">
+                <img src="./assets/images/uber.png" alt="logo uber" />
+              </div>
+              <div class="page-companies__images">
+                <img src="./assets/images/paypal.png" alt="logo paypal" />
+              </div>
+              <div class="page-companies__images">
+                <img src="./assets/images/visa.png" alt="logo visa" />
+              </div>
+              <div class="page-companies__images">
+                <img src="./assets/images/stripe.png" alt="logo stripe" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
   </body>
 </html>

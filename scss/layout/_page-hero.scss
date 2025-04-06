@@ -1,0 +1,34 @@
+@use "../utils/variables" as *;
+.page-hero {
+  margin-top: 30px;
+
+  &__container {
+    height: 700px;
+    background-image: url(../../assets/images/photo_1.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    display: flex;
+    align-items: center;
+  }
+  &__content {
+    display: grid;
+    gap: 30px;
+    padding: 74px 60px 74px 120px;
+    align-content: start;
+    background-color: $brand-color;
+    transform: translateX(-120px);
+  }
+  &__title {
+    max-width: 450px;
+    &--accent {
+      color: $favorite-color;
+    }
+  }
+  &__text {
+    max-width: 400px;
+    font-size: $ht-24;
+    font-weight: 400;
+    line-height: calc(29 / 20);
+    color: $main-color-white;
+  }
+}

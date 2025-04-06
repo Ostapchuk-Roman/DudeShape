@@ -1,0 +1,14 @@
+@use "../utils/variables" as *;
+.page-companies {
+  &__title {
+    margin-top: 140px;
+    text-align: center;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 40px;
+  }
+}

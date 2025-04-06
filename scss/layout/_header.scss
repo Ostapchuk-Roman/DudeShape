@@ -1,8 +1,73 @@
+@use "../utils/variables" as *;
+
 .header {
+  padding-top: 44px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__logo {
-    font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-family: "Montserrat";
+    font-size: $ht-24;
+    font-weight: bold;
     line-height: 100%;
-    margin: 43px 0;
+    color: $brand-secondary-color;
+  }
+
+  &__menu {
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: $secondary-dark-color;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $favorite-color;
+    }
+  }
+
+  &__icon {
+    &--input {
+      display: none;
+    }
+    &--search {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      fill: $brand-secondary-color;
+      transition: color 0.3s;
+
+      &:hover {
+        fill: $favorite-color;
+      }
+    }
+
+    &--burger {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      margin-left: 38px;
+      fill: $brand-secondary-color;
+      transition: color 0.3s;
+
+      &:hover {
+        fill: $favorite-color;
+      }
+    }
   }
 }

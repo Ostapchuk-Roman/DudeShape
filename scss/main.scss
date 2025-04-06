@@ -1,3 +1,7 @@
+@use "./base/reset";
 @use "./base/found";
+@use "./utils/variables";
 @use "./base/base";
 @use "./layout/header";
+@use "./layout/page-hero.scss";
+@use "./layout/page-companies.scss";
