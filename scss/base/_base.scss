@@ -24,10 +24,25 @@ h1 {
 }
 h2 {
   font-size: $ht-32;
-  line-height: 100%;
+  line-height: 40px;
   font-weight: bold;
   color: $brand-secondary-color;
 }
+
+h3 {
+  font-size: $ht-20;
+  line-height: 25px;
+  font-weight: medium;
+  color: $brand-secondary-color;
+}
+
+p {
+  font-size: $ht-20;
+  line-height: 25px;
+  font-weight: 400;
+  color: $secondary-gray-color;
+}
+
 a {
   line-height: 100%;
   font-weight: 400;

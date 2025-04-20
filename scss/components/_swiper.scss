@@ -1,0 +1,83 @@
+@use "../utils/variables" as *;
+.swiper {
+  max-width: 1240px;
+  overflow: hidden;
+
+  &__slide {
+    margin: 0 15px;
+    max-width: 370px;
+    box-shadow: 0px 13px 26px 0px rgba(0, 0, 0, 0.07);
+  }
+
+  &__card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 24px;
+  }
+
+  &__wrapper-icon {
+    width: 26px;
+    height: 26px;
+    background-color: $default-color;
+    border-radius: 50%;
+
+    &--flex {
+      display: flex;
+      gap: 8px;
+    }
+
+    & svg {
+      width: 10px;
+      height: 10px;
+      margin: 8px;
+    }
+  }
+  &__text {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 31px;
+    color: $brand-color;
+  }
+
+  &__button-buy {
+    padding: 6px 14px;
+    font-size: 12px;
+    line-height: 21px;
+    color: $main-color-white;
+    background-color: $button-main-color;
+    border-radius: 6px;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin: 49px 0;
+  }
+
+  &__button-prev {
+    &--wrapper {
+      width: 40px;
+      height: 40px;
+      background-color: $default-color;
+      border-radius: 50%;
+      transition: fill 0.3s ease;
+      cursor: pointer;
+
+      & svg {
+        width: 16px;
+        height: 16px;
+        margin: 12px;
+        fill: $secondary-gray-color;
+      }
+      &:active {
+        background-color: $button-main-color;
+      }
+    }
+  }
+  &__button-next {
+    & svg {
+      transform: rotate(180deg);
+    }
+  }
+}

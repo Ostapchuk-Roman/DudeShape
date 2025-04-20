@@ -1,0 +1,14 @@
+@use "../utils/variables" as *;
+
+.page-furniture {
+  padding-top: 140px;
+
+  &__title {
+  }
+
+  &__text {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    max-width: 820px;
+  }
+}
