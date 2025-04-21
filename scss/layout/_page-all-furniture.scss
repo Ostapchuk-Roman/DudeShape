@@ -1,0 +1,98 @@
+@use "../utils/variables" as *;
+.page-all-furniture {
+  &__title {
+    text-align: center;
+  }
+  &__category-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  &__category-button {
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 24px;
+    line-height: 27px;
+    color: $secondary-lighter-color;
+    transition: color $button-main-color 0.3s ease;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 0;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      font-weight: medium;
+      color: $button-main-color;
+
+      &::after {
+        width: calc(100% / 3);
+        height: 3px;
+      }
+    }
+  }
+
+  &__content-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 98px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -30px;
+      left: -30px;
+      width: 552px;
+      height: 390px;
+      background-color: $brand-color;
+      z-index: -1;
+    }
+  }
+
+  &__room-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+  }
+
+  &__room-button {
+    width: 222px;
+    height: 90px;
+    border: 3px solid #d9dce5;
+    fill: $secondary-svg-color;
+
+    transition: 0.3s ease;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      transition: 0.3s ease;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 21px;
+      color: $secondary-svg-color;
+    }
+
+    &:hover {
+      fill: $main-color-white;
+      background-color: $button-main-color;
+      p {
+        color: $main-color-white;
+      }
+    }
+  }
+}
