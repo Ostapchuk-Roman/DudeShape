@@ -45,7 +45,7 @@
   &__content-wrapper {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 98px;
 
@@ -70,7 +70,7 @@
   &__room-button {
     width: 222px;
     height: 90px;
-    border: 3px solid #d9dce5;
+    border: 1px solid #d9dce5;
     fill: $secondary-svg-color;
 
     transition: 0.3s ease;

@@ -1,0 +1,72 @@
+@use "../utils/variables" as *;
+.page-response {
+  margin-top: 140px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 180px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      width: 492px;
+      height: 492px;
+      border-radius: 50%;
+      background-color: $brand-color;
+      z-index: -1;
+    }
+  }
+
+  &__photo {
+    position: relative;
+    right: -120px;
+    border-radius: 8px;
+  }
+
+  &__wrapper {
+  }
+
+  &__title {
+    max-width: 412px;
+    line-height: 48px;
+  }
+
+  &__text {
+    margin-top: 30px;
+  }
+
+  &__client-wrapper {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__card-name {
+    font-size: 16px;
+    font-weight: 19px;
+    color: #000;
+  }
+
+  &__card-rating-wrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 8px;
+  }
+  & svg {
+    width: 16px;
+    height: 16px;
+    fill: $button-secondary-color;
+  }
+  &__card-rating {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 15px;
+    color: #000;
+  }
+}

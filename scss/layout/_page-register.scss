@@ -1,0 +1,64 @@
+@use "../utils/variables" as *;
+
+.page-register {
+  margin-top: 140px;
+
+  &__container {
+    background-color: $brand-color;
+  }
+
+  &__title {
+    max-width: 554px;
+    padding-top: 66px;
+    margin: 0 auto;
+    line-height: 48px;
+    text-align: center;
+    color: $main-color-white;
+  }
+
+  &__text {
+    max-width: 586px;
+    margin: 22px auto 0;
+    text-align: center;
+    color: $main-color-white;
+    opacity: 80%;
+  }
+  &__input-Wrapper {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin-top: 50px;
+
+    & svg {
+      position: relative;
+
+      top: 55px;
+      left: 375px;
+      width: 24px;
+      height: 24px;
+      fill: $secondary-svg-color;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 472px;
+    height: 68px;
+    margin: 0 auto;
+    padding-left: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: $main-color-white;
+  }
+
+  &__button {
+    cursor: pointer;
+    position: relative;
+    bottom: 61px;
+    left: 705px;
+    padding: 15px 32px;
+    border-radius: 10px;
+    color: $main-color-white;
+    background-color: $button-secondary-color;
+  }
+}

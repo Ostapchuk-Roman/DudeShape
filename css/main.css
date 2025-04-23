@@ -377,7 +377,7 @@ a {
 .page-all-furniture__content-wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 98px;
 }
@@ -399,7 +399,7 @@ a {
 .page-all-furniture__room-button {
   width: 222px;
   height: 90px;
-  border: 3px solid #d9dce5;
+  border: 1px solid #d9dce5;
   fill: #808080;
   transition: 0.3s ease;
 }
@@ -419,4 +419,118 @@ a {
 }
 .page-all-furniture__room-button:hover p {
   color: #ffffff;
+}
+
+.page-response {
+  margin-top: 140px;
+}
+.page-response__container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 180px;
+}
+.page-response__container::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  width: 492px;
+  height: 492px;
+  border-radius: 50%;
+  background-color: #154444;
+  z-index: -1;
+}
+.page-response__photo {
+  position: relative;
+  right: -120px;
+  border-radius: 8px;
+}
+.page-response__title {
+  max-width: 412px;
+  line-height: 48px;
+}
+.page-response__text {
+  margin-top: 30px;
+}
+.page-response__client-wrapper {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.page-response__card-name {
+  font-size: 16px;
+  font-weight: 19px;
+  color: #000;
+}
+.page-response__card-rating-wrapper {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 8px;
+}
+.page-response svg {
+  width: 16px;
+  height: 16px;
+  fill: #ffb624;
+}
+.page-response__card-rating {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 15px;
+  color: #000;
+}
+
+.page-register {
+  margin-top: 140px;
+}
+.page-register__container {
+  background-color: #154444;
+}
+.page-register__title {
+  max-width: 554px;
+  padding-top: 66px;
+  margin: 0 auto;
+  line-height: 48px;
+  text-align: center;
+  color: #ffffff;
+}
+.page-register__text {
+  max-width: 586px;
+  margin: 22px auto 0;
+  text-align: center;
+  color: #ffffff;
+  opacity: 80%;
+}
+.page-register__input-Wrapper {
+  margin-top: 50px;
+}
+.page-register__input-Wrapper svg {
+  position: relative;
+  top: 55px;
+  left: 375px;
+  width: 24px;
+  height: 24px;
+  fill: #808080;
+}
+.page-register__input {
+  display: block;
+  width: 472px;
+  height: 68px;
+  margin: 0 auto;
+  padding-left: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #ffffff;
+}
+.page-register__button {
+  cursor: pointer;
+  position: relative;
+  bottom: 61px;
+  left: 705px;
+  padding: 15px 32px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #ffb624;
 }/*# sourceMappingURL=main.css.map */
