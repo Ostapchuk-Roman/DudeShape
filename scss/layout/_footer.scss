@@ -1,0 +1,112 @@
+@use "../utils/variables" as *;
+.footer {
+  margin-top: 140px;
+
+  &__container {
+    padding: 0 89px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding-top: 80px;
+    background-color: $brand-color;
+  }
+
+  &__wrapper {
+    max-width: 338px;
+  }
+
+  &__logo {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 700;
+    color: $main-color-white;
+  }
+  &__text {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $main-color-white;
+    opacity: 90%;
+  }
+
+  &__contacts {
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin: 0px 14px 0 0;
+    border-radius: 50%;
+    background-color: $main-color-white;
+
+    & svg {
+      margin-top: 3px;
+      width: 14px;
+      height: 14px;
+      fill: $brand-color;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $main-color-white;
+
+    &--lower {
+      margin-top: 30px;
+    }
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 100%;
+    color: $main-color-white;
+    opacity: 90%;
+  }
+
+  & li {
+    margin-top: 16px;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 253px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: $main-color-white;
+
+    & input {
+      margin-left: 12px;
+      padding-left: 8px;
+      width: 193px;
+      height: 38px;
+      font-size: 16px;
+    }
+  }
+  &__button {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: $button-secondary-color;
+
+    & svg {
+      margin-top: 6px;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      fill: $main-color-white;
+    }
+  }
+  &__container-copyright {
+    padding: 20px 0;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid $brand-secondary-color;
+    color: $secondary-lighter-color;
+    background-color: $brand-color;
+  }
+}

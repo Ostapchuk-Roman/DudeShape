@@ -201,11 +201,11 @@ a {
 .page-hero__title--accent {
   color: #ef5423;
 }
-.page-hero__text {
+.page-hero__text p {
   max-width: 400px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 29px;
   color: #ffffff;
 }
 
@@ -533,4 +533,105 @@ a {
   border-radius: 10px;
   color: #ffffff;
   background-color: #ffb624;
+}
+
+.footer {
+  margin-top: 140px;
+}
+.footer__container {
+  padding: 0 89px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding-top: 80px;
+  background-color: #154444;
+}
+.footer__wrapper {
+  max-width: 338px;
+}
+.footer__logo {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.footer__text {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 90%;
+}
+.footer__contacts {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  margin: 0px 14px 0 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.footer__contacts svg {
+  margin-top: 3px;
+  width: 14px;
+  height: 14px;
+  fill: #154444;
+}
+.footer__title {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.footer__title--lower {
+  margin-top: 30px;
+}
+.footer__link {
+  font-size: 18px;
+  line-height: 100%;
+  color: #ffffff;
+  opacity: 90%;
+}
+.footer li {
+  margin-top: 16px;
+}
+.footer__input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 253px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.footer__input-wrapper input {
+  margin-left: 12px;
+  padding-left: 8px;
+  width: 193px;
+  height: 38px;
+  font-size: 16px;
+}
+.footer__button {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #ffb624;
+}
+.footer__button svg {
+  margin-top: 6px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  fill: #ffffff;
+}
+.footer__container-copyright {
+  padding: 20px 0;
+  font-size: 18px;
+  text-align: center;
+  border-top: 1px solid #244d4d;
+  color: #919090;
+  background-color: #154444;
 }/*# sourceMappingURL=main.css.map */

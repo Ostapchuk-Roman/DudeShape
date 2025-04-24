@@ -24,11 +24,11 @@
       color: $favorite-color;
     }
   }
-  &__text {
+  &__text p {
     max-width: 400px;
-    font-size: $ht-24;
+    font-size: $ht-20;
     font-weight: 400;
-    line-height: calc(29 / 20);
+    line-height: 29px;
     color: $main-color-white;
   }
 }
