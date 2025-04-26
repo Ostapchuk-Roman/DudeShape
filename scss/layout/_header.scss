@@ -1,38 +1,41 @@
 @use "../utils/variables" as *;
 
 .header {
-  padding-top: 44px;
-
   &__container {
     display: flex;
     justify-content: space-between;
+    padding: clamp(
+        20px,
+        calc(20px + (24 * ((100vw - 320px) / (1230 - 320)))),
+        44px
+      )
+      15px 0;
   }
 
   &__logo {
+    display: flex;
     font-family: "Montserrat";
-    font-size: $ht-24;
+    font-size: $fs_24px-20px;
     font-weight: bold;
     line-height: 100%;
+    align-items: center;
     color: $brand-secondary-color;
   }
 
   &__menu {
+    @media screen and (max-width: $dw-tablet-vertically) {
+      display: none;
+    }
   }
-}
 
-.menu {
-  display: flex;
-
-  &__list {
+  &__menu-list {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    align-items: center;
+    gap: calc(15px + (50 - 15) * ((100vw - 480px) / (1230 - 480)));
   }
 
-  &__item {
-  }
-
-  &__link {
+  &__menu-link {
     color: $secondary-dark-color;
     transition: color 0.3s;
 
@@ -41,33 +44,21 @@
     }
   }
 
-  &__icon {
-    &--input {
-      display: none;
-    }
-    &--search {
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-      fill: $brand-secondary-color;
-      transition: color 0.3s;
+  &__menu-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
 
-      &:hover {
-        fill: $favorite-color;
-      }
-    }
+  &__menu-icon-favorite {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    fill: $brand-secondary-color;
+    transition: color 0.3s;
 
-    &--burger {
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-      margin-left: 38px;
-      fill: $brand-secondary-color;
-      transition: color 0.3s;
-
-      &:hover {
-        fill: $favorite-color;
-      }
+    &:hover {
+      fill: $favorite-color;
     }
   }
 }

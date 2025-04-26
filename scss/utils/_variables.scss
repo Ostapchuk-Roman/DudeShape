@@ -11,10 +11,13 @@ $button-main-color: #244d4d;
 $button-secondary-color: #ffb624;
 
 $dw-desctop: 1280px;
-$dw-tablet: 768px;
+$dw-tablet-horizontally: 768px;
+$dw-tablet-vertically: 480px;
 $dw-mobil: 360px;
 
 $ht-56: 56px;
 $ht-32: 32px;
 $ht-24: 24px;
 $ht-20: 20px;
+
+$fs_24px-20px: calc(20px + (24 - 20) * ((100vw - 320px) / (1230 - 320)));

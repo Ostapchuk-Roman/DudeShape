@@ -3,6 +3,7 @@
 @use "./utils/variables";
 @use "./base/base";
 @use "./layout/header";
+@use "./components/burger";
 @use "./layout/page-hero.scss";
 @use "./layout/page-companies.scss";
 @use "./layout/page-about.scss";
