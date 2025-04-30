@@ -47,15 +47,20 @@
   &__menu-icon {
     display: flex;
     align-items: center;
-    margin-right: 30px;
   }
 
   &__menu-icon-favorite {
+    right: 100px;
     cursor: pointer;
     width: 24px;
     height: 24px;
     fill: $brand-secondary-color;
     transition: color 0.3s;
+
+    @media screen and (max-width: $dw-tablet-vertically) {
+      position: relative;
+      left: calc(40px + (115 - 40) * ((100vw - 320px) / (480 - 320)));
+    }
 
     &:hover {
       fill: $favorite-color;

@@ -90,7 +90,7 @@ body {
 
 h1 {
   font-family: "Montserrat";
-  font-size: 56px;
+  font-size: clamp(32px, 32px + 24 * (100vw - 480px) / 750, 56px);
   line-height: 115%;
   font-weight: bold;
   color: #ffffff;
@@ -111,7 +111,7 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+  font-size: calc(16px + 4 * (100vw - 480px) / 750);
   line-height: 25px;
   font-weight: 400;
   color: #383738;
@@ -157,14 +157,20 @@ a {
 .header__menu-icon {
   display: flex;
   align-items: center;
-  margin-right: 30px;
 }
 .header__menu-icon-favorite {
+  right: 100px;
   cursor: pointer;
   width: 24px;
   height: 24px;
   fill: #244d4d;
   transition: color 0.3s;
+}
+@media screen and (max-width: 480px) {
+  .header__menu-icon-favorite {
+    position: relative;
+    left: calc(40px + 75 * (100vw - 320px) / 160);
+  }
 }
 .header__menu-icon-favorite:hover {
   fill: #ef5423;
@@ -189,6 +195,15 @@ a {
   padding: 50px 40px;
   background-color: #244d4d;
   animation: burgerAnimation 0.4s;
+}
+.burger__logo {
+  margin-bottom: 40px;
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 100%;
+  text-align: center;
+  color: #ecf4ff;
 }
 .burger__menu-list {
   display: flex;
@@ -258,41 +273,63 @@ a {
   }
 }
 
+.button-type-1 {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 16px 26px;
+  color: #154444;
+  background-color: #ffffff;
+}
+
 .page-hero {
   margin-top: 30px;
 }
-.page-hero__container {
-  height: 700px;
-  background-image: url(../../assets/images/photo_1.jpg);
-  background-repeat: no-repeat;
-  background-position: right center;
+.page-hero__content {
   display: flex;
   align-items: center;
-}
-.page-hero__content {
-  display: grid;
-  gap: 30px;
-  padding: 74px 60px 74px 120px;
-  align-content: start;
+  width: 100%;
+  height: 100%;
   background-color: #154444;
-  transform: translateX(-120px);
+}
+@media screen and (max-width: 768px) {
+  .page-hero__content {
+    flex-direction: column;
+    height: 730px;
+    padding-top: 49px;
+    background-image: url(../../assets/images/background_hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  .page-hero__content img {
+    display: none;
+  }
+}
+.page-hero__text-wrapper {
+  padding-left: clamp(30px, 30px + 70 * (100vw - 768px) / 462, 100px);
+  padding-right: 30px;
 }
 .page-hero__title {
-  max-width: 450px;
+  max-width: 100%;
 }
 .page-hero__title--accent {
   color: #ef5423;
 }
-.page-hero__text p {
+.page-hero__text {
+  margin-top: 30px;
   max-width: 400px;
-  font-size: 20px;
   font-weight: 400;
   line-height: 29px;
   color: #ffffff;
 }
+@media screen and (max-width: 768px) {
+  .page-hero__text {
+    margin-top: 12px;
+  }
+}
 
 .page-companies__title {
-  margin-top: 140px;
+  margin-top: clamp(60px, 60px + 80 * (100vw - 320px) / 910, 140px);
   text-align: center;
 }
 .page-companies__wrapper {

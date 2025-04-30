@@ -21,6 +21,16 @@
     animation: burgerAnimation 0.4s;
   }
 
+  &__logo {
+    margin-bottom: 40px;
+    font-family: "Montserrat";
+    font-size: $ht-24;
+    font-weight: bold;
+    line-height: 100%;
+    text-align: center;
+    color: $default-color;
+  }
+
   &__menu-list {
     display: flex;
     align-items: center;

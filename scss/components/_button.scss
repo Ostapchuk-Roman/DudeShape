@@ -1,0 +1,9 @@
+@use "../utils/variables" as *;
+.button-type-1 {
+  margin-top: 30px;
+  font-size: $ht-20;
+  line-height: 25px;
+  padding: 16px 26px;
+  color: $brand-color;
+  background-color: $main-color-white;
+}

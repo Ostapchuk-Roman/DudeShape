@@ -1,7 +1,11 @@
 @use "../utils/variables" as *;
 .page-companies {
   &__title {
-    margin-top: 140px;
+    margin-top: clamp(
+      60px,
+      calc(60px + (80 * ((100vw - 320px) / (1230 - 320)))),
+      140px
+    );
     text-align: center;
   }
   &__wrapper {

@@ -16,8 +16,16 @@ $dw-tablet-vertically: 480px;
 $dw-mobil: 360px;
 
 $ht-56: 56px;
+
 $ht-32: 32px;
 $ht-24: 24px;
 $ht-20: 20px;
 
+$ht-56px-32px: clamp(
+  32px,
+  calc(32px + (24 * ((100vw - 480px) / (1230 - 480)))),
+  56px
+);
+
 $fs_24px-20px: calc(20px + (24 - 20) * ((100vw - 320px) / (1230 - 320)));
+$fs_20px-16px: calc(16px + (20 - 16) * ((100vw - 480px) / (1230 - 480)));
