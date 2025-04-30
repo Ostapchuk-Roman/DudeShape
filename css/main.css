@@ -97,7 +97,7 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: clamp(18px, 20px + 12 * (100vw - 320px) / 910, 32px);
   line-height: 40px;
   font-weight: bold;
   color: #244d4d;
@@ -111,7 +111,7 @@ h3 {
 }
 
 p {
-  font-size: calc(16px + 4 * (100vw - 480px) / 750);
+  font-size: clamp(16px, 18px + 4 * (100vw - 480px) / 750, 20px);
   line-height: 25px;
   font-weight: 400;
   color: #383738;
@@ -130,7 +130,7 @@ a {
 .header__logo {
   display: flex;
   font-family: "Montserrat";
-  font-size: calc(20px + 4 * (100vw - 320px) / 910);
+  font-size: clamp(20px, 18px + 4 * (100vw - 480px) / 750, 24px);
   font-weight: bold;
   line-height: 100%;
   align-items: center;
@@ -332,25 +332,51 @@ a {
   margin-top: clamp(60px, 60px + 80 * (100vw - 320px) / 910, 140px);
   text-align: center;
 }
-.page-companies__wrapper {
+.page-companies__marquee {
+  overflow: hidden;
+  position: relative;
+}
+.page-companies__inner {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 100px;
-  margin-top: 40px;
+  width: max-content;
+  animation: marquee 80s linear infinite;
+  gap: clamp(28px, 28px + 72 * (100vw - 320px) / 910, 100px);
+  margin-top: clamp(26px, 26px + 14 * (100vw - 320px) / 910, 40px);
+}
+.page-companies__images {
+  height: 40px;
+  display: block;
+}
+.page-companies__images img {
+  height: clamp(26px, 26px + 14 * (100vw - 320px) / 910, 40px);
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .page-about__container {
-  margin-top: 140px;
+  margin-top: clamp(70px, 70px + 70 * (100vw - 480px) / 750, 140px);
 }
 .page-about__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .page-about__wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .page-about__title--small {
   color: #244d4d;
-  font-size: 24px;
+  font-size: clamp(20px, 18px + 4 * (100vw - 480px) / 750, 24px);
   font-weight: 500;
   line-height: 26px;
 }
@@ -359,13 +385,13 @@ a {
   margin: 20px 0 40px;
 }
 .page-about__text--small {
-  font-size: 18px;
+  font-size: clamp(16px, 16px + 2 * (100vw - 480px) / 750, 18px);
   line-height: 27px;
   margin: 15px 0 30px;
 }
 .page-about__content {
+  max-width: 488px;
   display: flex;
-  width: 488px;
 }
 .page-about__icon {
   width: 50px;
@@ -374,6 +400,22 @@ a {
 }
 .page-about__wrapper-wrapper {
   margin-left: 20px;
+}
+.page-about__image {
+  position: relative;
+  max-width: 578px;
+  height: auto;
+  margin: 30px;
+}
+.page-about__image::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #ecf4ff;
+  z-index: -1;
 }
 
 .swiper {
