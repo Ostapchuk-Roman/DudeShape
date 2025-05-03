@@ -1,18 +1,35 @@
 @use "../utils/variables" as *;
 .swiper {
-  max-width: 1240px;
+  width: 100%;
   overflow: hidden;
 
+  &__wrapper {
+    padding: auto;
+  }
+
   &__slide {
-    margin: 0 15px;
-    max-width: 370px;
+    max-width: 480px;
     box-shadow: 0px 13px 26px 0px rgba(0, 0, 0, 0.07);
+    & img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__card-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 30px 24px;
+    padding: clamp(
+        20px,
+        calc(20px + (12 * ((100vw - 480px) / (1230 - 480)))),
+        30px
+      )
+      clamp(10px, calc(10px + (10 * ((100vw - 480px) / (1230 - 480)))), 20px);
+  }
+
+  &__title {
+    padding-right: 5px;
+    font-size: $fs_20px-16px;
   }
 
   &__wrapper-icon {
@@ -33,7 +50,7 @@
     }
   }
   &__text {
-    font-size: 24px;
+    font-size: $fs_24px-20px;
     font-weight: bold;
     line-height: 31px;
     color: $brand-color;
@@ -41,7 +58,7 @@
 
   &__button-buy {
     padding: 6px 14px;
-    font-size: 12px;
+    font-size: $ht-12;
     line-height: 21px;
     color: $main-color-white;
     background-color: $button-main-color;
@@ -53,6 +70,10 @@
     justify-content: right;
     gap: 10px;
     margin: 49px 0;
+
+    @media screen and (max-width: $dw-tablet-vertically) {
+      display: none;
+    }
   }
 
   &__button-prev {
@@ -80,4 +101,30 @@
       transform: rotate(180deg);
     }
   }
+  &__pagination {
+    display: none;
+    margin: 20px 0;
+    text-align: center;
+    @media screen and (max-width: $dw-tablet-vertically) {
+      display: block;
+    }
+  }
+}
+
+/* Базові буллети */
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  background-color: $brand-secondary-color !important;
+  opacity: 1;
+  border-radius: 10px !important;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+/* Активний буллет */
+.swiper-pagination-bullet-active {
+  width: 30px !important;
+  height: 15px !important;
+  background-color: $brand-color !important;
 }
