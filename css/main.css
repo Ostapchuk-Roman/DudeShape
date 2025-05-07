@@ -475,7 +475,7 @@ a {
   display: flex;
   justify-content: right;
   gap: 10px;
-  margin: 49px 0;
+  margin: 49px 0 0;
 }
 @media screen and (max-width: 480px) {
   .swiper__button-wrapper {
@@ -539,20 +539,23 @@ a {
   margin: 20px 0 40px;
 }
 
+.page-all-furniture {
+  margin-top: clamp(70px, 70px + 70 * (100vw - 320px) / 910, 140px);
+}
 .page-all-furniture__title {
   text-align: center;
 }
 .page-all-furniture__category-wrapper {
-  margin-top: 30px;
+  margin-top: clamp(20px, 20px + 20 * (100vw - 320px) / 910, 40px);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: clamp(20px, 20px + 80 * (100vw - 320px) / 910, 100px);
 }
 .page-all-furniture__category-button {
   position: relative;
   padding-bottom: 5px;
-  font-size: 24px;
+  font-size: clamp(16px, 16px + 10 * (100vw - 480px) / 750, 24px);
   line-height: 27px;
   color: #919090;
   transition: color #244d4d 0.3s ease;
@@ -582,29 +585,56 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 98px;
+  margin-top: clamp(40px, 40px + 58 * (100vw - 768px) / 462, 98px);
 }
-.page-all-furniture__content-wrapper::before {
-  position: absolute;
+@media screen and (max-width: 768px) {
+  .page-all-furniture__content-wrapper {
+    flex-direction: column-reverse;
+  }
+}
+.page-all-furniture__img-wrapper {
+  position: relative;
+  max-width: 578px;
+  height: auto;
+  margin: 30px;
+}
+.page-all-furniture__img-wrapper::before {
   content: "";
-  top: -30px;
-  left: -30px;
-  width: 552px;
-  height: 390px;
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  width: 100%;
+  height: 100%;
   background-color: #154444;
   z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .page-all-furniture__img-wrapper {
+    margin: 60px 30px 30px;
+  }
 }
 .page-all-furniture__room-wrapper {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .page-all-furniture__room-wrapper {
+    gap: clamp(10px, 10px + 20 * (100vw - 320px) / 448, 30px);
+  }
+}
 .page-all-furniture__room-button {
-  width: 222px;
-  height: 90px;
+  width: clamp(100px, 100px + 122 * (100vw - 480px) / 750, 222px);
+  height: clamp(60px, 60px + 30 * (100vw - 768px) / 462, 90px);
   border: 1px solid #d9dce5;
   fill: #808080;
   transition: 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .page-all-furniture__room-button {
+    width: clamp(132px, 132px + 90 * (100vw - 320px) / 448, 222px);
+    height: clamp(60px, 60px + 30 * (100vw - 320px) / 448, 90px);
+  }
 }
 .page-all-furniture__room-button svg {
   width: 24px;
@@ -625,39 +655,57 @@ a {
 }
 
 .page-response {
-  margin-top: 140px;
+  margin-top: clamp(40px, 40px + 70 * (100vw - 768px) / 462, 110px);
 }
 .page-response__container {
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 180px;
+  gap: clamp(30px, 30px + 150 * (100vw - 768px) / 462, 180px);
 }
-.page-response__container::before {
+@media screen and (max-width: 768px) {
+  .page-response__container {
+    flex-direction: column-reverse;
+  }
+}
+.page-response__photo-wrapper {
+  position: relative;
+  margin: 30px;
+}
+.page-response__photo-wrapper::before {
   content: "";
   position: absolute;
   left: -20px;
-  width: 492px;
-  height: 492px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #154444;
   z-index: -1;
 }
-.page-response__photo {
+.page-response__photo-wrapper img {
   position: relative;
-  right: -120px;
   border-radius: 8px;
+  right: clamp(-40px, -40px + 150 * (100vw - 768px) / 462, -120px);
 }
-.page-response__title {
-  max-width: 412px;
-  line-height: 48px;
+.page-response__wrapper {
+  width: calc(50% - 30px);
+}
+@media screen and (max-width: 768px) {
+  .page-response__wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-response__wrapper {
+    width: 100%;
+  }
 }
 .page-response__text {
-  margin-top: 30px;
+  margin-top: clamp(20px, 20px + 10 * (100vw - 320px) / 910, 30px);
 }
 .page-response__client-wrapper {
-  margin-top: 40px;
+  margin-top: clamp(20px, 20px + 20 * (100vw - 320px) / 910, 40px);
   display: flex;
   align-items: center;
   gap: 10px;

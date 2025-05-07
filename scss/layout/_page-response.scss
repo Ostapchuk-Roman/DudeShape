@@ -1,46 +1,76 @@
 @use "../utils/variables" as *;
 .page-response {
-  margin-top: 140px;
+  margin-top: clamp(
+    40px,
+    calc(40px + (70 * ((100vw - 768px) / (1230 - 768)))),
+    110px
+  );
 
   &__container {
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 180px;
+    gap: clamp(
+      30px,
+      calc(30px + (150 * ((100vw - 768px) / (1230 - 768)))),
+      180px
+    );
+    @media screen and (max-width: $dw-tablet-horizontally) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__photo-wrapper {
+    position: relative;
+    margin: 30px;
 
     &::before {
       content: "";
       position: absolute;
       left: -20px;
-      width: 492px;
-      height: 492px;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       background-color: $brand-color;
       z-index: -1;
     }
-  }
 
-  &__photo {
-    position: relative;
-    right: -120px;
-    border-radius: 8px;
+    & img {
+      position: relative;
+      border-radius: 8px;
+      right: clamp(
+        -40px,
+        calc(-40px + (150 * ((100vw - 768px) / (1230 - 768)))),
+        -120px
+      );
+    }
   }
 
   &__wrapper {
-  }
-
-  &__title {
-    max-width: 412px;
-    line-height: 48px;
+    width: calc(50% - 30px);
+    @media screen and (max-width: $dw-tablet-horizontally) {
+      width: 90%;
+    }
+    @media screen and (max-width: $dw-tablet-vertically) {
+      width: 100%;
+    }
   }
 
   &__text {
-    margin-top: 30px;
+    margin-top: clamp(
+      20px,
+      calc(20px + (10 * ((100vw - 320px) / (1230 - 320)))),
+      30px
+    );
   }
 
   &__client-wrapper {
-    margin-top: 40px;
+    margin-top: clamp(
+      20px,
+      calc(20px + (20 * ((100vw - 320px) / (1230 - 320)))),
+      40px
+    );
     display: flex;
     align-items: center;
     gap: 10px;

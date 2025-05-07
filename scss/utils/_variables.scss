@@ -21,6 +21,7 @@ $ht-32: 32px;
 $ht-24: 24px;
 $ht-20: 20px;
 $ht-18: 18px;
+$ht-16: 16px;
 $ht-12: 12px;
 
 $ht-56px-32px: clamp(
@@ -38,6 +39,13 @@ $fs_24px-20px: clamp(
   calc(18px + (4 * ((100vw - 480px) / (1230 - 480)))),
   24px
 );
+
+$fs_24px-18px: clamp(
+  16px,
+  calc(16px + (10 * ((100vw - 480px) / (1230 - 480)))),
+  24px
+);
+
 $fs_20px-16px: clamp(
   16px,
   calc(18px + (4 * ((100vw - 480px) / (1230 - 480)))),
