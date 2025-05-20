@@ -15,20 +15,19 @@
       <header class="header" id="header">
         <div class="header__container">
           <a class="header__logo" href="#header">DudeShape</a>
-
           <nav class="header__menu">
             <ul class="header__menu-list">
               <li class="header__menu-item">
-                <a class="header__menu-link" href="#">Home</a>
+                <a class="header__menu-link" href="#header">Home</a>
               </li>
               <li class="header__menu-item">
                 <a class="header__menu-link" href="#about">About</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__menu-link" href="#">Features</a>
+                <a class="header__menu-link" href="#all-furniture">Features</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__menu-link" href="#">Contact</a>
+                <a class="header__menu-link" href="#Contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -74,7 +73,7 @@
                   designed by professional interior designer.
                 </p>
                 <button class="page-hero__button button-type-1">
-                  Explore More
+                  learn more
                 </button>
               </div>
             </div>
@@ -156,7 +155,7 @@
                     <use href="./assets/icon/sprite.svg#icon-check_mark"></use>
                   </svg>
                   <div class="page-about__wrapper-wrapper">
-                    <h3 class="page-about__title--small">Free Shpping</h3>
+                    <h3 class="page-about__title--small">Free Shipping</h3>
                     <p class="page-about__text--small">
                       All of our furniture uses the best materials and choices
                     </p>
@@ -326,7 +325,7 @@
             </div>
           </div>
         </section>
-        <section class="page-all-furniture">
+        <section class="page-all-furniture" id="all-furniture">
           <div class="page-all-furniture__container">
             <h2 class="page-all-furniture__title">All Furniture</h2>
             <div class="page-all-furniture__category-wrapper">
@@ -395,7 +394,7 @@
             </div>
             <div class="page-response__wrapper">
               <h2 class="page-response__title">
-                Our customers are verry importan to us
+                Our customers are very important to us
               </h2>
               <p class="page-response__text">
                 All of our furniture uses the best matials and choices for our
@@ -420,7 +419,7 @@
             </div>
           </div>
         </section>
-        <!-- <section class="page-register">
+        <section class="page-register" id="Contact">
           <div class="page-register__container">
             <h2 class="page-register__title">
               Subscribe to get the latest news about us
@@ -430,24 +429,32 @@
               eiusmod tempor incididunt ut labore at dolore.
             </p>
 
-            <form class="page-register__input-Wrapper">
-              <svg>
-                <use href="./assets/icon/sprite.svg#icon-mail"></use>
-              </svg>
-              <input
-                class="page-register__input"
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="enter your email"
-              />
-              <button class="page-register__button">Register</button>
+            <form class="page-register__wrapper">
+              <div class="page-register__wrapper-wrapper">
+                <div class="page-register__input-svg">
+                  <svg>
+                    <use href="./assets/icon/sprite.svg#icon-mail"></use>
+                  </svg>
+                </div>
+                <div class="page-register__input-wrapper">
+                  <input
+                    class="page-register__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Email Address"
+                  />
+                </div>
+              </div>
+              <div class="page-register__input-button">
+                <button class="page-register__button">Register</button>
+              </div>
             </form>
           </div>
-        </section> -->
+        </section>
       </main>
-      <!-- <footer class="footer">
+      <footer class="footer">
         <div class="footer__container">
           <div class="footer__wrapper">
             <a class="footer__logo" href="#">DudeShape</a>
@@ -533,7 +540,7 @@
         <div class="footer__container-copyright">
           <a href="#">Copyright @ 2021. Crafted with love.</a>
         </div>
-      </footer> -->
+      </footer>
     </div>
     <script src="./js/burger_menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

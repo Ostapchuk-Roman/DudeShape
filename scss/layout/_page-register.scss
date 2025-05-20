@@ -1,10 +1,18 @@
 @use "../utils/variables" as *;
 
 .page-register {
-  margin-top: 140px;
+  margin-top: clamp(
+    70px,
+    calc(70px + (70 * ((100vw - 320px) / (1230 - 320)))),
+    140px
+  );
 
   &__container {
     background-color: $brand-color;
+    padding-bottom: 70px;
+    @media screen and (max-width: $dw-tablet-vertically) {
+      padding-bottom: 115px;
+    }
   }
 
   &__title {
@@ -23,17 +31,31 @@
     color: $main-color-white;
     opacity: 80%;
   }
-  &__input-Wrapper {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    margin-top: 50px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 472px;
+    height: 68px;
+    margin: 50px auto 0;
+    background-color: $main-color-white;
+    border-radius: 10px;
 
+    @media screen and (max-width: $dw-tablet-vertically) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__wrapper-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  &__input-svg {
+    margin: 7px 12px 0 17px;
     & svg {
-      position: relative;
-
-      top: 55px;
-      left: 375px;
       width: 24px;
       height: 24px;
       fill: $secondary-svg-color;
@@ -41,21 +63,31 @@
   }
 
   &__input {
-    display: block;
-    width: 472px;
-    height: 68px;
-    margin: 0 auto;
-    padding-left: 45px;
-    border-radius: 10px;
-    font-size: 20px;
+    width: 260px;
+    height: 40px;
+    padding: 5px;
+    font-size: $ht-16;
     background-color: $main-color-white;
+    @media screen and (max-width: $dw-tablet-vertically) {
+      width: clamp(
+        220px,
+        calc(220px + (150 * ((100vw - 320px) / (480 - 320)))),
+        370px
+      );
+      height: 40px;
+      padding: 5px;
+    }
+  }
+
+  &__input-button {
+    margin: 0 10px;
+    @media screen and (max-width: $dw-tablet-vertically) {
+      margin: 30px 20px;
+    }
   }
 
   &__button {
     cursor: pointer;
-    position: relative;
-    bottom: 61px;
-    left: 705px;
     padding: 15px 32px;
     border-radius: 10px;
     color: $main-color-white;
