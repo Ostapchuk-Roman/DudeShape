@@ -301,7 +301,7 @@ a {
     flex-direction: column;
     height: 730px;
     padding-top: 49px;
-    background-image: url(../../assets/images/background_hero.jpg);
+    background-image: url(../assets/images/background_hero.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
   }
